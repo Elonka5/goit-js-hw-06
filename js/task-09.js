@@ -8,9 +8,11 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-changeBtnColor.addEventListener('click', () => {
+const changeColor = () => {
   const randomColor = getRandomHexColor();
 
   body.style.backgroundColor = randomColor;
   colorName.textContent = randomColor;
-});
+}
+
+changeBtnColor.addEventListener('click', changeColor)
