@@ -11,3 +11,10 @@ const onhandlerSubmit = event => {
 };
 
 form.addEventListener("submit", onhandlerSubmit);
+
+const findUniq = str => 
+str.find((el,idx,array) => {
+    const sortedString = el.split('').sort().join('')
+return array.every((elem,i) => i === idx || sortedString !== elem.split('').sort().join(''))
+}
+)
